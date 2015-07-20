@@ -17,9 +17,9 @@ public class DriveTrain {
 		
 	}
 
-	public void driveByUI(double xMove, double yMove, double zMove){
+	public void driveByUI(double[] inputs){
 		
-		double[] voltages = DriveTrainCalc.mecanumAlgorithm(xMove, yMove, zMove);
+		double[] voltages = DriveTrainCalc.mecanumAlgorithm(inputs);
 		
 		frontRight.set(voltages[0]);
 		frontLeft.set(voltages[1]);
