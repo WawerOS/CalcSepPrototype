@@ -2,6 +2,8 @@
 package org.usfirst.frc.team4215.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.Talon;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -11,7 +13,19 @@ import edu.wpi.first.wpilibj.IterativeRobot;
  * directory.
  */
 public class Robot extends IterativeRobot {
-    /**
+   Talon frontRight = new Talon(0);
+   Talon frontLeft = new Talon(1);
+   Talon backRight = new Talon(2);
+   Talon backLeft = new Talon(3);
+   
+   Joystick driveStick = new Joystick(0);
+   
+   DriveTrain chassis = new DriveTrain(frontRight, frontLeft, backRight, backLeft);
+   
+   UI driverStation = new UI(driveStick);
+   
+	
+	/**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
@@ -30,7 +44,9 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
+        double[] inputs = driverStation.getDriveStick();
         
+        chassis.driveByUI(inputs);
     }
     
     /**
