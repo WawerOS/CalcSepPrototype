@@ -1,5 +1,7 @@
 package org.usfirst.frc.team4215.robot;
-
+/*
+ * this is an abstraction of all the calculation the user interface needs to do
+ */
 public class UICalc {
 
 	static double[] conditionDriveStick(double xMove, double yMove, double zMove){

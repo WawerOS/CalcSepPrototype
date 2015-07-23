@@ -1,7 +1,9 @@
 package org.usfirst.frc.team4215.robot;
 
 import edu.wpi.first.wpilibj.Talon;
-
+/*
+ * This is an abstraction of the drive train
+ */
 public class DriveTrain {
 	Talon frontRight;
 	Talon frontLeft;

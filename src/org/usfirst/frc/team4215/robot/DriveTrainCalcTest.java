@@ -1,6 +1,9 @@
 package org.usfirst.frc.team4215.robot;
 import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
+/*
+ * a unit test for DriveTrainCalc
+ */
 public class DriveTrainCalcTest {
 	@Test
 	public void checkDriveTrainAlgorithm(){

@@ -1,5 +1,7 @@
 package org.usfirst.frc.team4215.robot;
-
+/*
+ * this is an abstraction of all the calculation the drive train needs to do
+ */
 public class DriveTrainCalc {
 
 	static public double[] mecanumAlgorithm(double[] inputs){

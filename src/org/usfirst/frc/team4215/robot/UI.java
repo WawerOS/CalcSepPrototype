@@ -1,6 +1,8 @@
 package org.usfirst.frc.team4215.robot;
 import edu.wpi.first.wpilibj.Joystick;
-
+/*
+ * and abstraction of the User interface
+ */
 public class UI {
 	Joystick driveStick;
 	
