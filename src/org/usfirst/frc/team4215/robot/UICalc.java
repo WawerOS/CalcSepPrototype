@@ -7,6 +7,7 @@ public class UICalc {
 	static double[] conditionDriveStick(double xMove, double yMove, double zMove){
 		double[] conditionedValues = { 0, 0, 0,};
 		
+		//TODO conditioning algorithm
 		conditionedValues[0] = xMove;
 		conditionedValues[1] = yMove;
 		conditionedValues[2] = zMove;
@@ -14,4 +15,12 @@ public class UICalc {
 		return conditionedValues;
 	}
 
+	static double[] conditionThirdStick(double[] thirdStickInputs){
+		double[] conditionedValues;
+		
+		//TODO conditioning algorithm
+		conditionedValues = thirdStickInputs;
+		
+		return conditionedValues;
+	}
 }

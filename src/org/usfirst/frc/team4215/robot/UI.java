@@ -5,9 +5,11 @@ import edu.wpi.first.wpilibj.Joystick;
  */
 public class UI {
 	Joystick driveStick;
+	Joystick thirdStick;
 	
-	public UI(Joystick driveStick) {
+	public UI(Joystick driveStick, Joystick thirdStick) {
 		this.driveStick = driveStick;
+		this.thirdStick = thirdStick;
 	}
 	
 	public double[] getDriveStick(){
@@ -16,5 +18,19 @@ public class UI {
 		double zMove = driveStick.getZ();
 		
 		return UICalc.conditionDriveStick(xMove, yMove, zMove);
+	}
+	
+	public double[] getThirdStick(){
+		
+		double[] inputs = null;
+		
+		//A temporary patch because I don't know how many axises' the controller has.
+		int axisCount = thirdStick.getAxisCount();
+		
+		for(int i = 0; i != axisCount;i++){
+			inputs[i] = thirdStick.getRawAxis(i);
+		}
+		
+		return UICalc.conditionThirdStick(inputs);
 	}
 }

@@ -9,4 +9,7 @@ public class Elevator {
 		this.elevatorMotor = elevatorMotor;
 	}
 	
+	public void moveElevator(){
+		
+	}
 }
