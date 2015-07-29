@@ -8,6 +8,9 @@ I made a Proof of concept of a code seperated sysytem with associated unit tests
 
 - I abstracted out the control of several collections wpilib objects to several classes.
 
+##Please Discuss
+- Does 
+
 ##Test Checklist
 - [ ] Test Translation
 
