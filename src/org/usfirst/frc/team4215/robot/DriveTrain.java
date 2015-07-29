@@ -1,5 +1,6 @@
 package org.usfirst.frc.team4215.robot;
 
+import edu.wpi.first.wpilibj.BuiltInAccelerometer;
 import edu.wpi.first.wpilibj.Talon;
 /*
  * This is an abstraction of the drive train
@@ -10,13 +11,16 @@ public class DriveTrain {
 	Talon backRight;
 	Talon backLeft;
 	
-	public DriveTrain(Talon frontRight, Talon frontLeft, Talon backRight, Talon backLeft) {
+	BuiltInAccelerometer accelerometer;
+	
+	public DriveTrain(Talon frontRight, Talon frontLeft, Talon backRight, Talon backLeft,
+			BuiltInAccelerometer accelerometer) {
 		
 		this.frontRight = frontRight;
 		this.frontLeft = frontLeft; 
 		this.backRight = backRight;
 		this.backLeft = backLeft;
-		
+		this.accelerometer = accelerometer;
 	}
 
 	public void driveByUI(double[] inputs){

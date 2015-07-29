@@ -9,7 +9,8 @@ public class Elevator {
 		this.elevatorMotor = elevatorMotor;
 	}
 	
-	public void moveElevator(){
-		
+	public void moveElevator(double speed){
+		double adjustedSpeed = ElevatorCalc.elevatorCode(speed);
+		elevatorMotor.set(adjustedSpeed);
 	}
 }
