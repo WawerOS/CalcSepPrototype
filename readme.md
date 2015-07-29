@@ -1,10 +1,12 @@
 #Unit Test Project
-I made a Proof of concept of a code seperated sysytem.
+I made a Proof of concept of a code seperated sysytem with associated unit tests.
 
 ##Design Choices
+- I chose the framework that required the least amount of setup so I could concentrate on the modules.
+
 - in order to enable easier passing around of joystick values, I packaged them into an array.
 
-- I abstracted out a control of wpilib objects to several objects.
+- I abstracted out the control of several collections wpilib objects to several classes.
 
 ##Test Checklist
 - [ ] Test Translation
@@ -16,4 +18,4 @@ I made a Proof of concept of a code seperated sysytem.
 - The bug I most expect is misaligned Talon's, or switched sine and cosine.
 - If the bug is more than that please gather all information possible about it's occurence.
 
-Thank you!! 
+Thank you!!
