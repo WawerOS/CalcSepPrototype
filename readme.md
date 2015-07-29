@@ -16,4 +16,4 @@ I made a Proof of concept of a code seperated sysytem.
 - The bug I most expect is misaligned Talon's, or switched sine and cosine.
 - If the bug is more than that please gather all information possible about it's occurence.
 
-Thank you!! 
+Thank you!!

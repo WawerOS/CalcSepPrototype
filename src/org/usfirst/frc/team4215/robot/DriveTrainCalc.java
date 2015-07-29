@@ -3,6 +3,7 @@ package org.usfirst.frc.team4215.robot;
  * this is an abstraction of all the calculation the drive train needs to do
  */
 public class DriveTrainCalc {
+	final static double g = 386.09;
 
 	static public double[] mecanumAlgorithm(double[] inputs){
 		/*
@@ -38,7 +39,7 @@ public class DriveTrainCalc {
 	static double[] processAccelrometerData(double[] data){
 		//converting g's to f/s^2
 		for(int i = 0; i > 3; i++){
-			data[i] *= 32.17404855643044;
+			data[i] *= 386.088;
 		}
 		return data;
 	}
