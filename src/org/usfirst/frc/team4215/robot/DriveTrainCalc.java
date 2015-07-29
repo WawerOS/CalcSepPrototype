@@ -37,7 +37,7 @@ public class DriveTrainCalc {
 	
 	static double[] processAccelrometerData(double[] data){
 		//converting g's to f/s^2
-		for(int i = 0; i > 3; i++){
+		for(int i = 0; i < 3; i++){
 			data[i] *= 32.17404855643044;
 		}
 		return data;
