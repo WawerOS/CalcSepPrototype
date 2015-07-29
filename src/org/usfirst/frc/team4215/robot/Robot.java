@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team4215.robot;
 
+import edu.wpi.first.wpilibj.BuiltInAccelerometer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Talon;
@@ -18,11 +19,14 @@ public class Robot extends IterativeRobot {
    Talon backRight = new Talon(2);
    Talon backLeft = new Talon(3);
    
+   BuiltInAccelerometer accelerometer = new BuiltInAccelerometer();
+   
    Joystick driveStick = new Joystick(0);
+   Joystick thirdStick = new Joystick(2);
    
-   DriveTrain chassis = new DriveTrain(frontRight, frontLeft, backRight, backLeft);
+   DriveTrain chassis = new DriveTrain(frontRight, frontLeft, backRight, backLeft, accelerometer);
    
-   UI driverStation = new UI(driveStick);
+   UI driverStation = new UI(driveStick, thirdStick);
    
 	
 	/**

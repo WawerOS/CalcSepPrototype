@@ -33,4 +33,13 @@ public class DriveTrain {
 		backLeft.set(voltages[3]);
 		
 	}
+	public double[] getAcceleration(){
+		double[] accelVector = null;
+		
+		accelVector[0] = accelerometer.getX();
+		accelVector[1] = accelerometer.getY();
+		accelVector[2] = accelerometer.getZ();
+		
+		return DriveTrainCalc.processAccelrometerData(accelVector);
+	}
 }
