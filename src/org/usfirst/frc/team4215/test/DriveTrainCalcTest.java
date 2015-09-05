@@ -1,6 +1,7 @@
-package org.usfirst.frc.team4215.robot;
+package org.usfirst.frc.team4215.test;
 import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
+import org.usfirst.frc.team4215.robot.DriveTrainCalc;;
 /*
  * a unit test for DriveTrainCalc
  */
