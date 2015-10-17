@@ -11,7 +11,7 @@ I made a Proof of concept of a code seperated sysytem with associated unit tests
 ##Please Discuss
 - Is this a workable concept? Are there others we could explore before build season?
 - Do the abstractions made for subsystems make sense? Should we assign sensors to a entirely seperate subsystems or integrate them into mechanical ones?
-- Is there anything to learn from this, patterns to continue and pitfalls to avoid? 
+- Is there anything to learn from this, patterns to continue and pitfalls to avoid?
 
 ##Test Checklist
 - [ ] Test Translation
@@ -22,5 +22,7 @@ I made a Proof of concept of a code seperated sysytem with associated unit tests
 
 - The bug I most expect is misaligned Talon's, or switched sine and cosine.
 - If the bug is more than that please gather all information possible about it's occurence.
+##Building
+It now uses GradleRIO to build and deploy check GradleRIO4Dummies for more  info.
 
 Thank you!!
