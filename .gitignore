@@ -39,3 +39,4 @@ bin/*
 # IDE generated files #
 #######################
 .project
+.gradle/*

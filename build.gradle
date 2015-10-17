@@ -12,7 +12,7 @@ buildscript {
 	}
   }
   dependencies {
-    classpath group: 'jaci.openrio.gradle', name: 'GradleRIO', version: '+'			//Change this line if you wish to Update GradleRIO
+    classpath group: 'jaci.openrio.gradle', name: 'GradleRIO', version: '+'		//Change this line if you wish to Update GradleRIO
   }
 }
 
@@ -24,6 +24,11 @@ apply plugin: 'eclipse'
 gradlerio.robotClass = "org.usfirst.frc.team0000.Robot"   //The class for the main Robot Class. Used in manifest
 gradlerio.team = "5333"                                   //Your FRC team number (e.g. 5333 for team 'Can't C#', or 47 for Chief Delphi)
 //gradlerio.rioIP = "10.53.33.20"                         //Uncomment to specify the IP address of the RIO
+
+
+dependencies {
+	compile group: 'junit', name: 'junit', version: '4.+'
+}
 
 def robotManifest = {
   attributes 'Main-Class': 'edu.wpi.first.wpilibj.RobotBase'
