@@ -28,7 +28,7 @@ public class UI {
 		int axisCount = thirdStick.getAxisCount();
 		
 		for(int i = 0; i != axisCount;i++){
-			inputs[i] = thirdStick.getRawAxis(i);
+			inputs[i] = thirdStick.getRawAxis(i+1);
 		}
 		
 		return UICalc.conditionThirdStick(inputs);
