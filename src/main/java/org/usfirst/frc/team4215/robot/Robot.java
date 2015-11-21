@@ -50,7 +50,7 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
         double[] inputs = driverStation.getDriveStick();
         
-        chassis.driveByUI(inputs);
+        chassis.driveBySpeedVector(inputs);
     }
     
     /**

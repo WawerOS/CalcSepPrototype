@@ -23,7 +23,7 @@ public class DriveTrain {
 		this.accelerometer = accelerometer;
 	}
 
-	public void driveByUI(double[] inputs){
+	public void driveBySpeedVector(double[] inputs){
 		
 		double[] voltages = DriveTrainCalc.mecanumAlgorithm(inputs);
 		
