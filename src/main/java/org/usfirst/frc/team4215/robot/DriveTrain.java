@@ -2,8 +2,9 @@ package org.usfirst.frc.team4215.robot;
 
 import edu.wpi.first.wpilibj.BuiltInAccelerometer;
 import edu.wpi.first.wpilibj.Talon;
-/*
- * This is an abstraction of the drive train
+/**
+ This is an abstraction of the drive train
+ @author Waweru
  */
 public class DriveTrain {
 	Talon frontRight;

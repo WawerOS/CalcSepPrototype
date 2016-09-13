@@ -24,7 +24,8 @@ public class Robot extends IterativeRobot {
    Joystick driveStick = new Joystick(0);
    Joystick thirdStick = new Joystick(2);
    
-   DriveTrain chassis = new DriveTrain(frontRight, frontLeft, backRight, backLeft, accelerometer);
+   DriveTrain chassis = new DriveTrain(new Talon (0), frontLeft, backRight,
+		   backLeft, accelerometer);
    
    UI driverStation = new UI(driveStick, thirdStick);
    
