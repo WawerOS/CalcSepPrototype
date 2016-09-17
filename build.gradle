@@ -33,7 +33,7 @@ dependencies {
 def robotManifest = {
   attributes 'Main-Class': 'edu.wpi.first.wpilibj.RobotBase'
   attributes 'Robot-Class': gradlerio.robotClass
-}7
+}
 
 jar {
   from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
