@@ -18,6 +18,7 @@ public class Robot extends IterativeRobot {
    Talon frontLeft = new Talon(1);
    Talon backRight = new Talon(2);
    Talon backLeft = new Talon(3);
+   Talon elevMotor = new Talon(4);
    
    BuiltInAccelerometer accelerometer = new BuiltInAccelerometer();
    
@@ -26,6 +27,8 @@ public class Robot extends IterativeRobot {
    
    DriveTrain chassis = new DriveTrain(new Talon (0), frontLeft, backRight,
 		   backLeft, accelerometer);
+   
+   Elevator elevCon = new Elevator(elevMotor);
    
    UI driverStation = new UI(driveStick, thirdStick);
    
@@ -49,9 +52,11 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        double[] inputs = driverStation.getDriveStick();
+        double[] driveInputs = driverStation.getDriveStick();
+        double elevInput = driverStation.getThirdStick();
+        chassis.driveBySpeedVector(driveInputs);
+        elevCon.moveElevator(elevInput);
         
-        chassis.driveBySpeedVector(inputs);
     }
     
     /**
