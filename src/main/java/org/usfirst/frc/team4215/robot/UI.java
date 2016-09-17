@@ -20,17 +20,8 @@ public class UI {
 		return UICalc.conditionDriveStick(xMove, yMove, zMove);
 	}
 	
-	public double[] getThirdStick(){
+	public double getThirdStick(){
 		
-		double[] inputs = null;
-		
-		//A temporary patch because I don't know how many axises' the controller has.
-		int axisCount = thirdStick.getAxisCount();
-		
-		for(int i = 0; i != axisCount;i++){
-			inputs[i] = thirdStick.getRawAxis(i+1);
-		}
-		
-		return UICalc.conditionThirdStick(inputs);
+		return thirdStick.getY();
 	}
 }
